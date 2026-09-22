@@ -21,9 +21,10 @@ html {
 body,
 p,
 .nav-link,
+.btn-call,
 .btn-book,
 .specialty {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Gothic A1', sans-serif;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
@@ -158,6 +159,35 @@ body {
   box-shadow: var(--neu-shadow-inset);
 }
 
+/*=========*/
+
+.btn-call {
+  background: var(--surface-dark);
+  color: var(--text-main);
+  padding: 0.4rem 0.65rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--neu-shadow-outer);
+  transition: all 0.2s ease;
+}
+
+.btn-call:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.08), 
+              10px 10px 25px rgba(0, 0, 0, 0.95);
+}
+
+.btn-call:active {
+  transform: translateY(0);
+  box-shadow: var(--neu-shadow-inset);
+}
+
+
 /* Contact Hyperlinks Styling */
 .contact-link {
   color: #ffffff;
@@ -171,7 +201,6 @@ body {
   color: #0066ff; /* Matches your brand blue accent */
   text-decoration: underline;
 }
-
 
 /* ==========================================================================
    4. HERO SECTION STYLES
@@ -272,7 +301,7 @@ body {
 }
 
 .hero-intro p {
-  color: var(--text-muted);
+  color: rgb(207, 206, 206);
   font-size: 1rem;
 }
 
@@ -319,6 +348,7 @@ body {
     0 5px 10px rgba(0, 0, 0, 0.7);
 }
 
+
 /* Background Hexagon Pattern */
 .card-bg-hex {
   position: absolute;
@@ -364,14 +394,17 @@ body {
 }
 
 .barber-card-content h2 {
+  font-family: "New Rocker", system-ui;
   font-size: 1.75rem;
   font-weight: 800;
   margin: 0;
   color: #ffffff;
+  
 }
 
 .instagram-handle {
-  color: #0066ff;
+  font-family: "Sorts Mill Goudy", serif;
+  color: #fcfdfd;
   font-weight: 600;
   font-size: 0.95rem;
   margin: 0;
@@ -421,6 +454,11 @@ body {
   }
 
   .btn-book {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-call {
     padding: 0.7rem 1.5rem;
     font-size: 0.9rem;
   }
@@ -478,6 +516,22 @@ body {
       0px 0px 22px 8px rgba(0, 102, 255, 0.75),
       0 10px 20px rgba(0, 0, 0, 0.85);
   }
+
+.barber-handle {
+  display: inline-block;
+  font-family: 'Gothic A1', sans-serif;
+  color: #ffffff; /* Keeps it crisp white */
+  text-decoration: underline; /* Underlined by default */
+  text-underline-offset: 4px; /* Gives the underline a little breathing room */
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.barber-handle:hover {
+  color: #94a3b8; /* Fades to a soft slate gray on hover */
+  text-decoration: underline;
+}
 }
 
 /* ==========================================================================

@@ -3,33 +3,46 @@ const barbersData = [
   {
     id: "sergio-castaneda",
     name: "Sergio Castaneda",
-    handle: "@barber_serg10",
+    handle: "https://instagram.com/barber_serg10",
+    displayHandle: "@barber_serg10",
     image: "assets/images/barbers/Sergio.jpg",
-    booksyUrl: "https://booksy.com"
+    booksyUrl: "tel:+15202783729"
   },
 
   {
     id: "jose-serna",
     name: "Jose Serna",
-    handle: "@fadezbypollo",
+    handle: "https://instagram.com/fadezbypollo",
+    displayHandle: "@fadezbypollo",
     image: "assets/images/barbers/Jose.jpg",
-    booksyUrl: "https://booksy.com"
+    booksyUrl: "tel:+15203891884"
   },
 
   {
     id: "felix-salmon",
     name: "Felix Salmon",
-    handle: "@sapoblendz",
+    handle: "https://instagram.com/sapoblendz",
+    displayHandle: "@sapoblendz",
     image: "assets/images/barbers/Felix.jpg",
-    booksyUrl: "https://booksy.com"
+    booksyUrl: "http://sapoblendz97.booksy.com/a/"
   },
 
   {
     id: "edgar-armenta",
     name: 'Edgar Armenta',
-    handle: "",
+    handle: "https://instagram.com/eacutz88",
+    displayHandle: "@eacutz88",
     image: "assets/images/barbers/Edgar.jpg",
-    booksyUrl: "https://booksy.com"
+    booksyUrl: "http://eacutz88.booksy.com/a/"
+  },
+
+  {
+    id: "ashley-castaneda",
+    name: 'Ashley Castaneda',
+    handle: "https://instagram.com/ashblendz_",
+    displayHandle: "@ashblendz_",
+    image: "assets/images/barbers/Ashley.jpg",
+    booksyUrl: "http://ashblendz60.booksy.com/a/"
   }
 ];
 
@@ -59,7 +72,9 @@ function renderBarbers(barbers) {
       <div class="barber-card-content">
         <div class="card-bg-hex"></div>
         <h2>${barber.name}</h2>
-        <p class="instagram-handle">IG: ${barber.handle}</p>
+        <a href="${barber.handle}" class="barber-handle" target="_blank" rel="noopener noreferrer">
+        Instagram: ${barber.displayHandle}
+        </a>
         <a 
           href="${barber.booksyUrl}" 
           target="_blank" 
