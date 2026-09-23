@@ -349,7 +349,7 @@ body {
 }
 
 
-/* Background Hexagon Pattern */
+/* Background Hexagon Pattern 
 .card-bg-hex {
   position: absolute;
   bottom: 0;
@@ -365,6 +365,7 @@ body {
   z-index: 0;
   transform: rotate(80deg);
 }
+*/
 
 /* Image Container */
 .barber-card-media {
@@ -394,9 +395,9 @@ body {
 }
 
 .barber-card-content h2 {
-  font-family: "New Rocker", system-ui;
-  font-size: 1.75rem;
-  font-weight: 800;
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
   margin: 0;
   color: #ffffff;
   
@@ -471,11 +472,12 @@ body {
     padding: 0 1.5rem;
   }
 
+  /* Switch card to a 2-column Grid on desktop */
   .barber-card {
-    max-width: 100%; /* Expands to full section width */
-    display: flex;
-    flex-direction: row; /* Flips card internal layout to horizontal */
-    align-items: center;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 40% 1fr; /* 40% image, 60% text */
+    align-items: stretch;           /* Forces both columns to match height */
     text-align: left;
     min-height: 270px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -483,31 +485,38 @@ body {
 
   /* Left Half: Portrait Image */
   .barber-card-media {
-    flex: 0 0 40%;
+    width: 100%;
     height: 100%;
-    align-self: stretch;
   }
 
   .barber-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-top-left-radius: 28px;
     border-bottom-left-radius: 28px;
     border-top-right-radius: 0;
+    display: block;
   }
 
-  /* Right Half: Details & Button */
+  /* Right Half: Details & Button (Now perfectly centered vertically) */
   .barber-card-content {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers name, handle, and button vertically */
+    align-items: center;
     padding: 2rem 2.5rem;
-    align-items: flex-start;
     gap: 0.6rem;
+    height: 100%;
   }
 
   .barber-card-content h2 {
     font-size: 2rem;
+    margin: 0;
   }
 
   .book-btn {
-    align-self: flex-start;
+    align-self: center;
   }
 
   .barber-card:hover {
@@ -517,24 +526,23 @@ body {
       0 10px 20px rgba(0, 0, 0, 0.85);
   }
 
-.barber-handle,
-.barber-handle:visited {
-  display: inline-block;
-  font-family: 'Gothic A1', sans-serif;
-  color: #ffffff; /* Keeps it crisp white */
-  text-decoration: underline; /* Underlined by default */
-  text-underline-offset: 4px; /* Gives the underline a little breathing room */
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-  transition: color 0.2s ease, opacity 0.2s ease;
-}
+  .barber-handle,
+  .barber-handle:visited {
+    display: inline-block;
+    font-family: 'Gothic A1', sans-serif;
+    color: #fcfdfd;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    transition: color 0.2s ease, 0.2s ease;
+  }
 
-.barber-handle:hover {
-  color: #94a3b8; /* Fades to a soft slate gray on hover */
-  text-decoration: underline;
+  .barber-handle:hover {
+    color: #94a3b8;
+    text-decoration: underline;
+  }
 }
-}
-
 /* ==========================================================================
    EXTRA SMALL MOBILE TARGETING (iPhone SE / 375px and below)
    ========================================================================== */
