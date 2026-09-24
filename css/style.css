@@ -228,6 +228,12 @@ body {
   border-bottom: 1px solid rgba(0, 102, 255, 0.25);
 }
 
+/* Add breathing room between paragraphs and the location/phone info */
+.hero-section p, 
+.hero-intro p {
+  margin-bottom: 1.5rem; /* Adjust this value (e.g., 1.5rem or 2rem) for more or less space */
+}
+
 /* ==========================================================================
    HERO HOURS STYLING
    ========================================================================== */
@@ -380,6 +386,7 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  object-position: center 10%;
 }
 
 /* Text Content Area */
@@ -432,6 +439,114 @@ body {
   transform: translateY(-2px);
 }
 
+/* Beauty Studio Card Theme (White background, gold & black text) */
+.barber-card.beauty-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(212, 175, 55, 0.4); /* Subtle gold border frame */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 20px rgba(212, 175, 55, 0.15); /* Soft gold and shadow glow */
+}
+
+/* Text inside the beauty card */
+.beauty-card h2 {
+  color: #1a1a1a; /* Deep black for the title */
+  font-family: 'Sorts Mill Goudy', serif; /* Matching your typography style */
+}
+
+.beauty-card .instagram-handle,
+.beauty-card .instagram-handle:visited,
+.beauty-card .barber-handle,
+.beauty-card .barber-handle:visited {
+  color: #2c2c2c; /* Dark charcoal/black for readability */
+}
+
+.beauty-card .instagram-handle:hover,
+.beauty-card .barber-handle:hover {
+  color: #b8860b; /* Rich gold hover state */
+}
+
+/* Jewelry Gold Button for Beauty Card (Overrides Global Blue) */
+.beauty-card .book-btn {
+  background: linear-gradient(135deg, #f6e27a 0%, #d4af37 40%, #fff3b0 60%, #aa771c 100%) !important;
+  color: #111111 !important;
+  font-weight: 700;
+  border: 1px solid rgba(255, 223, 128, 0.9) !important;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.6), 0 0 10px rgba(255, 215, 0, 0.3) !important;
+}
+
+/* Jewelry Gold Button Hover State */
+.beauty-card .book-btn:hover {
+  background: linear-gradient(135deg, #ffea8c 0%, #e2be42 40%, #fffae0 60%, #c69214 100%) !important;
+  color: #111111 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(255, 215, 0, 0.85), 0 0 15px rgba(255, 235, 150, 0.5) !important;
+}
+
+/* Forcefully replace the blue outer glow with jewelry gold on hover */
+.barbers-section .barber-card.beauty-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 0 30px rgba(212, 175, 55, 0.75) !important;
+  border-color: rgba(212, 175, 55, 0.9) !important;
+}
+
+/* Force ONLY Jordana's beauty card image to a square 1:1 aspect ratio */
+.beauty-card .barber-card-media {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Makes just this container square */
+  overflow: hidden;
+}
+
+.beauty-card .barber-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops the excess height gracefully */
+  object-position: center top; /* Keeps focus on her portrait */
+}
+
+/* La Oficina Repair Card Theme (Blue background, white text, red button) */
+.barber-card.oficina-card {
+  background-color: #1e3a8a; /* Rich repair shop blue background */
+  border: 1px solid rgba(239, 68, 68, 0.4); /* Subtle red border frame */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 0 20px rgba(30, 58, 138, 0.3);
+}
+
+/* Text inside the oficina card */
+.oficina-card h2 {
+  color: #ffffff !important; /* Crisp white for headings */
+  font-family: 'Sorts Mill Goudy', serif;
+}
+
+.oficina-card .instagram-handle,
+.oficina-card .instagram-handle:visited,
+.oficina-card .barber-handle,
+.oficina-card .barber-handle:visited {
+  color: #e2e8f0; /* Soft off-white for readability */
+}
+
+.oficina-card .instagram-handle:hover,
+.oficina-card .barber-handle:hover {
+  color: #ef4444; /* Vibrant red hover state */
+}
+
+/* Striking Red Button for La Oficina (Overrides Global Defaults) */
+.oficina-card .book-btn {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.5), 0 0 10px rgba(239, 68, 68, 0.3) !important;
+}
+
+/* Red Button Hover State */
+.oficina-card .book-btn:hover {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 50%, #dc2626 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(239, 68, 68, 0.8), 0 0 15px rgba(254, 202, 202, 0.5) !important;
+}
+
+/* Force outer card hover glow to coordinate with the red/blue theme */
+.barbers-section .barber-card.oficina-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 30px rgba(239, 68, 68, 0.4) !important;
+  border-color: rgba(239, 68, 68, 0.8) !important;
+}
 
 /* ==========================================================================
    6. DESKTOP / WIDE SCREEN RESPONSIVE BREAKPOINT (768px+)
@@ -570,6 +685,7 @@ body {
   }
 }
 
+
 /* ==========================================================================
    FOOTER STYLES
    ========================================================================== */
@@ -628,3 +744,4 @@ body {
   font-size: 0.75rem;
   color: var(--text-muted);
 }
+
