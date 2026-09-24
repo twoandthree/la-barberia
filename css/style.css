@@ -442,10 +442,12 @@ body {
 /* Beauty Studio Card Theme (White background, gold & black text) */
 .barber-card.beauty-card {
   background-color: #ffffff;
-  border: 1px solid rgba(212, 175, 55, 0.4); /* Subtle gold border frame */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 0 20px rgba(212, 175, 55, 0.15); /* Soft gold and shadow glow */
+  box-shadow: 0px 0px 15px 6px rgb(223, 173, 8); /* Soft gold and shadow glow */
 }
 
+.barbers-section .barber-card.beauty-card:hover {
+  box-shadow: 0px 0px 15px 6px rgba(255, 215, 96, 0.9) !important;
+}
 /* Text inside the beauty card */
 .beauty-card h2 {
   color: #1a1a1a; /* Deep black for the title */
@@ -481,12 +483,6 @@ body {
   box-shadow: 0 6px 30px rgba(255, 215, 0, 0.85), 0 0 15px rgba(255, 235, 150, 0.5) !important;
 }
 
-/* Forcefully replace the blue outer glow with jewelry gold on hover */
-.barbers-section .barber-card.beauty-card:hover {
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 0 30px rgba(212, 175, 55, 0.75) !important;
-  border-color: rgba(212, 175, 55, 0.9) !important;
-}
-
 /* Force ONLY Jordana's beauty card image to a square 1:1 aspect ratio */
 .beauty-card .barber-card-media {
   width: 100%;
@@ -506,6 +502,11 @@ body {
 .barber-card.oficina-card {
   background-color: #1e3a8a; /* Rich repair shop blue background */
   box-shadow: 0px 0px 15px 6px #ef4444a5;
+}
+
+/* Force outer card hover glow to coordinate with the red/blue theme */
+.barbers-section .barber-card.oficina-card:hover {
+  box-shadow: 0px 0px 15px 6px rgb(235, 80, 80) !important;
 }
 
 /* Text inside the oficina card */
@@ -540,11 +541,6 @@ body {
   color: #ffffff !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 30px rgba(239, 68, 68, 0.8), 0 0 15px rgba(254, 202, 202, 0.5) !important;
-}
-
-/* Force outer card hover glow to coordinate with the red/blue theme */
-.barbers-section .barber-card.oficina-card:hover {
-  box-shadow: 0px 0px 15px 6px rgb(235, 80, 80) !important;
 }
 
 /* ==========================================================================
