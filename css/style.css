@@ -501,11 +501,11 @@ body {
   object-position: center top; /* Keeps focus on her portrait */
 }
 
+/*===========*/
 /* La Oficina Repair Card Theme (Blue background, white text, red button) */
 .barber-card.oficina-card {
   background-color: #1e3a8a; /* Rich repair shop blue background */
-  border: 1px solid rgba(239, 68, 68, 0.4); /* Subtle red border frame */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 0 20px rgba(30, 58, 138, 0.3);
+  box-shadow: 0px 0px 15px 6px #ef4444a5;
 }
 
 /* Text inside the oficina card */
@@ -528,7 +528,7 @@ body {
 
 /* Striking Red Button for La Oficina (Overrides Global Defaults) */
 .oficina-card .book-btn {
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%) !important;
+  background: linear-gradient(135deg, #ef4444 0%, rgb(220, 38, 38) 50%, #b91c1c 100%) !important;
   color: #ffffff !important;
   font-weight: 700;
   box-shadow: 0 4px 20px rgba(220, 38, 38, 0.5), 0 0 10px rgba(239, 68, 68, 0.3) !important;
@@ -536,7 +536,7 @@ body {
 
 /* Red Button Hover State */
 .oficina-card .book-btn:hover {
-  background: linear-gradient(135deg, #f87171 0%, #ef4444 50%, #dc2626 100%) !important;
+  background: linear-gradient(135deg, rgb(248, 113, 113) 0%, #ef4444 50%, #dc2626 100%) !important;
   color: #ffffff !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 30px rgba(239, 68, 68, 0.8), 0 0 15px rgba(254, 202, 202, 0.5) !important;
@@ -544,8 +544,7 @@ body {
 
 /* Force outer card hover glow to coordinate with the red/blue theme */
 .barbers-section .barber-card.oficina-card:hover {
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 30px rgba(239, 68, 68, 0.4) !important;
-  border-color: rgba(239, 68, 68, 0.8) !important;
+  box-shadow: 0px 0px 15px 6px rgb(235, 80, 80) !important;
 }
 
 /* ==========================================================================
