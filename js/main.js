@@ -1,8 +1,8 @@
 // Barber Data Source (Add, remove, or modify barbers here)
 const barbersData = [
   {
-    id: "sergio-castaneda",
-    name: "Sergio Castaneda",
+    id: "sergio-castañeda",
+    name: "Sergio Castañeda",
     handle: "https://instagram.com/barber_serg10",
     displayHandle: "@barber_serg10",
     image: "assets/images/barbers/Sergio.jpg",
@@ -37,8 +37,8 @@ const barbersData = [
   },
 
   {
-    id: "ashley-castaneda",
-    name: 'Ashley Castaneda',
+    id: "ashley-castañeda",
+    name: 'Ashley Castañeda',
     handle: "https://instagram.com/ashblendz_",
     displayHandle: "@ashblendz_",
     image: "assets/images/barbers/Ashley.jpg",
