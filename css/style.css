@@ -240,7 +240,7 @@ body {
 .hero-hours {
   margin-top: 1.25rem;
   padding: 1rem 1.25rem;
-  background: rgba(13, 13, 13, 0.50);
+  background: rgba(13, 13, 13, 0.55);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
