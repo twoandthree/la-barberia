@@ -765,3 +765,26 @@ body {
 .barber-map-card iframe {
   border-radius: 28px; /* Ensures map corners don't poke out of the glass frame */
 }
+
+/* ==========================================================================
+   HERO BADGE EMBLEM
+   ========================================================================== */
+.hero-badge {
+  width: 170px;          /* Clean mobile width */
+  height: auto;
+  margin: 0 auto 1.25rem auto;
+  display: block;
+  object-fit: contain;
+  
+  /* Red Ambient Backlight Glow */
+  filter: drop-shadow(0 0 18px rgba(0, 13, 255, 0.55));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Desktop Hero Badge Sizing */
+@media (min-width: 768px) {
+  .hero-badge {
+    width: 220px;       /* Larger centerpiece footprint on desktop */
+    margin-bottom: 1.5rem;
+  }
+}
